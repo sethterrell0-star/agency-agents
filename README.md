@@ -34,7 +34,24 @@ cp -r agency-agents/* ~/.claude/agents/
 # "Hey Claude, activate Frontend Developer mode and help me build a React component"
 ```
 
-### Option 2: Use as Reference
+### Option 2: Use with GitHub Copilot in VS Code
+
+The agents are available as **Copilot prompt files** in `.github/prompts/`. No setup is required — they work automatically when you open this repository in VS Code with GitHub Copilot.
+
+**Activate an agent in Copilot Chat:**
+
+1. Open **Copilot Chat** (`Ctrl+Alt+I` / `Cmd+Alt+I`)
+2. Type `/` to see available prompts and select an agent, for example:
+   - `/engineering-frontend-developer` — activates the Frontend Developer agent
+   - `/testing-reality-checker` — activates the Reality Checker agent
+   - `/design-ui-designer` — activates the UI Designer agent
+3. Copilot will adopt the selected agent's persona and respond accordingly
+
+**Browse all 56 available agents** in the [`.github/prompts/`](.github/prompts/) directory.
+
+> **Note:** Prompt files require VS Code 1.96+ with GitHub Copilot Chat. The included [`.vscode/settings.json`](.vscode/settings.json) enables prompt files automatically when you open this workspace.
+
+### Option 3: Use as Reference
 
 Each agent file contains:
 - Identity & personality traits
@@ -337,8 +354,10 @@ Special recognition to the 50+ Redditors who requested this within the first 12 
 ## 🚀 Get Started
 
 1. **Browse** the agents above and find specialists for your needs
-2. **Copy** the agents to `~/.claude/agents/` for Claude Code integration
-3. **Activate** agents by referencing them in your Claude conversations
+2. Choose your integration:
+   - **Claude Code**: Copy agents to `~/.claude/agents/` and activate in Claude conversations
+   - **GitHub Copilot (VS Code)**: Open this repo and use `/agent-name` in Copilot Chat (VS Code 1.96+)
+3. **Activate** agents by referencing them in your AI conversations
 4. **Customize** agent personalities and workflows for your specific needs
 5. **Share** your results and contribute back to the community
 
